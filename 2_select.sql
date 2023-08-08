@@ -6,4 +6,20 @@ SELECT name_collection FROM collections WHERE year_collection BETWEEN 2018 AND 2
 
 SELECT name_performer FROM performers WHERE name_performer NOT LIKE '% %';
 
-SELECT name_track FROM tracks WHERE name_track LIKE '%мой%' OR name_track LIKE '%my%';
+SELECT name_track FROM tracks WHERE name_track ILIKE 'мой %'
+OR name_track ILIKE '% мой' 
+OR name_track ILIKE '% мой %' 
+OR name_track ILIKE 'мой' 
+OR name_track ILIKE 'my %' 
+OR name_track ILIKE '% my' 
+OR name_track ILIKE '% my %' 
+OR name_track ILIKE 'my';
+
+/*Вторая реализация ^ */
+
+SELECT name_track FROM tracks WHERE name_track ~* '\Y my |\ymy |\ymy$|\Y мой |\yмой |\yмой$';
+
+/*Третья реализация ^ */
+
+SELECT name_track FROM tracks WHERE string_to_array(lower(name_track),' ') && ARRAY['my','мой'];
+

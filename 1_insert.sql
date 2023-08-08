@@ -13,7 +13,9 @@ VALUES('1','Wake (Instrumental)','100'),('1','Given Up','189'),('2','Hung Up','3
 ('3','Kaleidoscope','456'),('3','Escape Me','257'),('4','How Much Is The Fish?','226'),('4','We Are The Greatest','308'),
 ('5','Next to You','150'),('5','Englishman in New York','263'),('6','Reborn','332'),('6','Prayers','260'),
 ('3','You Are My Diamond','250'),('5','You Will Be My Ain True Love','224'),('6','Come into My World','319'),
-('7','Eve of Destruction','280');
+('7','Eve of Destruction','280'),('6','myself','237'),('6','Рамой','259'),('6','Любимый мой','254'),('6','World My','512'),
+('6','my own','512'),('6','own my','512'),('6','my','512'),('6','oh my god','512'),('6','bemy self','512'),('6','by myself','512'),
+('6','myself by','512'),('6','by myself by','512'),('6','beemy','512'),('6','premyne','512');
 
 INSERT INTO collections (name_collection,year_collection) 
 VALUES('Dance Chart','2010'),('Top Tracks','2012'),('Music Online','2018'),('Music Library','2007');

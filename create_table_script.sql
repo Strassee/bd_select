@@ -30,13 +30,13 @@ CREATE TABLE IF NOT EXISTS tracks (
 CREATE TABLE IF NOT EXISTS perf_genr (
 	id_genre INTEGER NOT NULL REFERENCES genres(id_genre),
 	id_performer INTEGER NOT NULL REFERENCES performers(id_performer),
-	CONSTRAINT pk PRIMARY KEY (id_genre, id_performer)
+	CONSTRAINT pk_pg PRIMARY KEY (id_genre, id_performer)
 );
 
 CREATE TABLE IF NOT EXISTS perf_alb (
 	id_album INTEGER NOT NULL REFERENCES albums(id_album),
 	id_performer INTEGER NOT NULL REFERENCES performers(id_performer),
-	CONSTRAINT pk PRIMARY KEY (id_album, id_performer)
+	CONSTRAINT pk_pa PRIMARY KEY (id_album, id_performer)
 );
 
 CREATE TABLE IF NOT EXISTS track_collection (
